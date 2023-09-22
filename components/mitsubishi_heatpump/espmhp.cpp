@@ -440,6 +440,7 @@ void MitsubishiHeatPump::setup() {
 
     ESP_LOGCONFIG(TAG, "Intializing new HeatPump object.");
     this->hp = new HeatPump();
+    this->hp->enableExternalUpdate();
     this->current_temperature = NAN;
     this->target_temperature = NAN;
     this->fan_mode = climate::CLIMATE_FAN_OFF;
